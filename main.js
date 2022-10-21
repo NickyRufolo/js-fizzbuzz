@@ -1,10 +1,19 @@
-for(let x = 0; x <= 100; x++) {
-    console.log(x);
+
+for(let x = 1; x <= 100; x++) {
+    let div = document.createElement(`div`)
+    div.innerText = ""
     if(x % 3 === 0 && x % 5 === 0){
-        console.log(x + `FizzBuzz`);
+        div.innerText += "FizzBazz";
+        div.classList.add("red");
 }   else if (x % 5 === 0){
-        console.log(x + `Buzz`)
+        div.innerText += "Buzz";
+        div.classList.add(`green`);
 }   else if (x % 3 === 0){
-    console.log(x + `Fizz`)
+        div.innerText += "Fizz";
+        div.classList.add(`yellow`);
+}   else {
+        div.innerText += x;
+        div.classList.add(`blue`);
 }
+    document.getElementById(`small-box-cont`).appendChild(div);
 }
